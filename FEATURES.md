@@ -6,7 +6,7 @@ A modern forum platform with social networking, content management, and communit
 
 - **Backend:** Laravel 13.x (PHP 8.3+)
 - **Frontend:** Tailwind CSS v4, Alpine.js, Lucide Icons
-- **Database:** SQLite
+- **Database:** MySQL
 - **Build:** Vite 8.x
 - **Markdown:** Marked.js (client) + Michelf PHP Markdown (server)
 
