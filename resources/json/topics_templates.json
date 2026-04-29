@@ -1,0 +1,217 @@
+{
+  "templates": [
+    {
+      "id": "duvida-tecnica",
+      "name": "Dúvida Técnica",
+      "description": "Template para perguntar dudas tecnicas",
+      "icon": "help-circle",
+      "fields": {
+        "title": {
+          "type": "text",
+          "label": "Título",
+          "placeholder": "Descreva sua dúvida em uma frase",
+          "required": true,
+          "maxLength": 255
+        },
+        "body": {
+          "type": "textarea",
+          "label": "Descrição",
+          "placeholder": "Explique sua dúvida com detalhes. Inclua código, erros, e o que já tentou.",
+          "required": true,
+          "minLength": 50
+        },
+        "technology": {
+          "type": "select",
+          "label": "Tecnologia",
+          "options": ["PHP", "Laravel", "JavaScript", "React", "Vue", "Node.js", "Python", "Outro"],
+          "required": false
+        },
+        "priority": {
+          "type": "select",
+          "label": "Urgência",
+          "options": ["Baixa", "Média", "Alta"],
+          "default": "Média",
+          "required": false
+        }
+      },
+      "defaultGroup": null
+    },
+    {
+      "id": "showcase",
+      "name": "Showcase",
+      "description": "Mostre seus projetos",
+      "icon": "monitor",
+      "fields": {
+        "title": {
+          "type": "text",
+          "label": "Nome do Projeto",
+          "placeholder": "Nome do seu projeto",
+          "required": true,
+          "maxLength": 255
+        },
+        "body": {
+          "type": "textarea",
+          "label": "Descrição",
+          "placeholder": "Descreva seu projeto, funcionalidades, stack utilizada, etc.",
+          "required": true,
+          "minLength": 100
+        },
+        "repoUrl": {
+          "type": "url",
+          "label": "Repositório (GitHub/GitLab)",
+          "placeholder": "https://github.com/...",
+          "required": false
+        },
+        "demoUrl": {
+          "type": "url",
+          "label": "Demo",
+          "placeholder": "https://...",
+          "required": false
+        },
+        "techStack": {
+          "type": "tags",
+          "label": "Tech Stack",
+          "placeholder": "Adicione tecnologias usadas",
+          "required": false
+        }
+      },
+      "defaultGroup": "showcase-projetos"
+    },
+    {
+      "id": "tutorial",
+      "name": "Tutorial",
+      "description": "Compartilhe um tutorial",
+      "icon": "book-open",
+      "fields": {
+        "title": {
+          "type": "text",
+          "label": "Título do Tutorial",
+          "placeholder": "Título do seu tutorial",
+          "required": true,
+          "maxLength": 255
+        },
+        "body": {
+          "type": "textarea",
+          "label": "Conteúdo",
+          "placeholder": "Escreva seu tutorial aqui. Use markdown se necessário.",
+          "required": true,
+          "minLength": 200
+        },
+        "difficulty": {
+          "type": "select",
+          "label": "Dificuldade",
+          "options": ["Iniciante", "Intermediário", "Avançado"],
+          "default": "Iniciante",
+          "required": true
+        },
+        "estimatedTime": {
+          "type": "text",
+          "label": "Tempo Estimado",
+          "placeholder": "ex: 30 minutos",
+          "required": false
+        }
+      },
+      "defaultGroup": null
+    },
+    {
+      "id": "bug-report",
+      "name": "Reportar Bug",
+      "description": "Reportar um bug encontrado",
+      "icon": "bug",
+      "fields": {
+        "title": {
+          "type": "text",
+          "label": "Título",
+          "placeholder": "Breve descrição do bug",
+          "required": true,
+          "maxLength": 255
+        },
+        "body": {
+          "type": "textarea",
+          "label": "Detalhes do Bug",
+          "placeholder": "Passos para reproduzir, erro exibido, ambiente, etc.",
+          "required": true,
+          "minLength": 50
+        },
+        "environment": {
+          "type": "text",
+          "label": "Ambiente",
+          "placeholder": "SO, versão do PHP, navegador, etc.",
+          "required": false
+        },
+        "severity": {
+          "type": "select",
+          "label": "Severidade",
+          "options": ["Baixa", "Média", "Alta", "Crítica"],
+          "default": "Média",
+          "required": false
+        }
+      },
+      "defaultGroup": null
+    },
+    {
+      "id": "discussao",
+      "name": "Discussão",
+      "description": "Iniciar uma discussão",
+      "icon": "message-circle",
+      "fields": {
+        "title": {
+          "type": "text",
+          "label": "Tópico",
+          "placeholder": "Sobre o que você quer discutir?",
+          "required": true,
+          "maxLength": 255
+        },
+        "body": {
+          "type": "textarea",
+          "label": "Contexto",
+          "placeholder": "Dê contexto para a discussão",
+          "required": true,
+          "minLength": 20
+        }
+      },
+      "defaultGroup": null
+    },
+    {
+      "id": "blog-post",
+      "name": "Post de Blog",
+      "description": "Post estilo blog/artigo",
+      "icon": "edit-3",
+      "fields": {
+        "title": {
+          "type": "text",
+          "label": "Título",
+          "placeholder": "Título do seu artigo",
+          "required": true,
+          "maxLength": 255
+        },
+        "body": {
+          "type": "textarea",
+          "label": "Conteúdo",
+          "placeholder": "Escreva seu artigo aqui...",
+          "required": true,
+          "minLength": 500
+        },
+        "summary": {
+          "type": "textarea",
+          "label": "Resumo",
+          "placeholder": "Um breve resumo para exibir na listagem",
+          "required": true,
+          "maxLength": 300
+        },
+        "category": {
+          "type": "select",
+          "label": "Categoria",
+          "options": ["Tecnologia", "Carreira", "Tutorial", "Opinion", "Notícia"],
+          "required": true
+        },
+        "coverImage": {
+          "type": "image",
+          "label": "Imagem de Capa",
+          "required": false
+        }
+      },
+      "defaultGroup": null
+    }
+  ]
+}

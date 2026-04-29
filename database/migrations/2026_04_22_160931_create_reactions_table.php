@@ -1,0 +1,30 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('reactions', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->uuid('user_id');
+            $table->string('type');
+            $table->uuid('reactionable_id');
+            $table->string('reactionable_type');
+            $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unique(['user_id', 'reactionable_id', 'reactionable_type', 'type'], 'reactions_user_reactionable_type_unique');
+            $table->index('reactionable_id');
+            $table->index('reactionable_type');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('reactions');
+    }
+};
